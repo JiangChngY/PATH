@@ -1,0 +1,194 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 2789921588@qq.com, 1, LIC=585FJ-UFN55-EV81R-KN0Y8-U3XTQ-VTM0N
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\Stm32App\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+D:\32\FreeRTOS\07_获取任务运行时间\MDK-ARM\HAL_Key.uvprojx
+Project File Date:  03/05/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Stm32App\ARM\ARMCC\Bin'
+Build target 'HAL_Key'
+compiling stream_buffer.c...
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(219): error:  #147-D: declaration is incompatible with "StreamBufferHandle_t xStreamBufferGenericCreate(size_t, size_t, BaseType_t, StreamBufferCallbackFunction_t, StreamBufferCallbackFunction_t)"  (declared at line 883 of "../FreeRTOS/include/stream_buffer.h")
+  	StreamBufferHandle_t xStreamBufferGenericCreate( size_t xBufferSizeBytes, size_t xTriggerLevelBytes, BaseType_t xIsMessageBuffer )
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(263): error:  #120: return value type does not match the function type
+  		return ( StreamBufferHandle_t * ) pucAllocatedMemory; /*lint !e9087 !e826 Safe cast as allocated memory is aligned. */
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(271): error:  #147-D: declaration is incompatible with "StreamBufferHandle_t xStreamBufferGenericCreateStatic(size_t, size_t, BaseType_t, uint8_t *const, StaticStreamBuffer_t *const, StreamBufferCallbackFunction_t, StreamBufferCallbackFunction_t)"  (declared at line 890 of "../FreeRTOS/include/stream_buffer.h")
+  	StreamBufferHandle_t xStreamBufferGenericCreateStatic( size_t xBufferSizeBytes,
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(523): error:  #167: argument of type "StreamBuffer_t *" is incompatible with parameter of type "StreamBufferHandle_t"
+  				xSpace = xStreamBufferSpacesAvailable( pxStreamBuffer );
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(555): error:  #167: argument of type "StreamBuffer_t *" is incompatible with parameter of type "StreamBufferHandle_t"
+  		xSpace = xStreamBufferSpacesAvailable( pxStreamBuffer );
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c(613): error:  #167: argument of type "StreamBuffer_t *" is incompatible with parameter of type "StreamBufferHandle_t"
+  	xSpace = xStreamBufferSpacesAvailable( pxStreamBuffer );
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c: 0 warnings, 6 errors
+compiling tasks.c...
+..\FreeRTOS\source\tasks.c(2536): error:  #29: expected an expression
+                              *pulTotalRunTime = 
+ortGET_RUN_TIME_COUNTER_VALUE();
+..\FreeRTOS\source\tasks.c(3027): error:  #29: expected an expression
+                  ulTotalRunTime = 
+ortGET_RUN_TIME_COUNTER_VALUE();
+..\FreeRTOS\source\tasks.c: 0 warnings, 2 errors
+compiling tasks.c...
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(95): warning:  #47-D: incompatible redefinition of macro "tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE"  (declared at line 1187 of "../FreeRTOS/include/FreeRTOS.h")
+  #define tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE	( ( configSUPPORT_STATIC_ALLOCATION == 1 ) && ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1198): error:  #40: expected an identifier
+  	void 
+TaskDelayUntil( TickType_t * const pxPreviousWakeTime, const TickType_t xTimeIncrement )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1198): error:  #65: expected a ";"
+  	void 
+TaskDelayUntil( TickType_t * const pxPreviousWakeTime, const TickType_t xTimeIncrement )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1248): warning:  #12-D: parsing restarts here after previous syntax error
+  			*pxPreviousWakeTime = xTimeToWake;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1250): error:  #169: expected a declaration
+  			if( xShouldDelay != pdFALSE )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1263): warning:  #12-D: parsing restarts here after previous syntax error
+  		xAlreadyYielded = xTaskResumeAll();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1267): error:  #169: expected a declaration
+  		if( xAlreadyYielded == pdFALSE )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1352): warning:  #12-D: parsing restarts here after previous syntax error
+  				eReturn = eBlocked;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1353): error:  #169: expected a declaration
+  			}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1390): warning:  #12-D: parsing restarts here after previous syntax error
+  		return eReturn;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1391): error:  #169: expected a declaration
+  	} /*lint !e818 xTask cannot be a pointer to const because it is a typedef. */
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1443): warning:  #12-D: parsing restarts here after previous syntax error
+  		uxSavedInterruptState = 
+ortSET_INTERRUPT_MASK_FROM_ISR();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1444): error:  #169: expected a declaration
+  		{
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1450): error:  #260-D: explicit type is missing ("int" assumed)
+  		
+ortCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptState );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1450): error:  #92: identifier-list parameters may only be used in a function definition
+  		
+ortCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptState );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1450): error:  #147: declaration is incompatible with "void vPortSetBASEPRI(uint32_t)"  (declared at line 170 of "../FreeRTOS/portable/portmacro.h")
+  		
+ortCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptState );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1452): error:  #169: expected a declaration
+  		return uxReturn;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1453): error:  #169: expected a declaration
+  	}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1482): warning:  #12-D: parsing restarts here after previous syntax error
+  			pxTCB = 
+rvGetTCBFromHandle( xTask );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1487): error:  #169: expected a declaration
+  			{
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1496): error:  #169: expected a declaration
+  			if( uxCurrentBasePriority != uxNewPriority )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1540): warning:  #12-D: parsing restarts here after previous syntax error
+  				uxPriorityUsedOnEntry = pxTCB->uxPriority;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1543): error:  #169: expected a declaration
+  				{
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1566): error:  #169: expected a declaration
+  				if( ( listGET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ) ) & taskEVENT_LIST_ITEM_VALUE_IN_USE ) == 0UL )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1613): warning:  #12-D: parsing restarts here after previous syntax error
+  				( void ) uxPriorityUsedOnEntry;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1614): error:  #169: expected a declaration
+  			}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1617): error:  #169: expected a declaration
+  	}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1657): warning:  #12-D: parsing restarts here after previous syntax error
+  			vListInsertEnd( &xSuspendedTaskList, &( pxTCB->xStateListItem ) );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1660): error:  #169: expected a declaration
+  			{
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1669): error:  #169: expected a declaration
+  		}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1672): error:  #169: expected a declaration
+  		if( xSchedulerRunning != pdFALSE )
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1710): warning:  #12-D: parsing restarts here after previous syntax error
+  					vTaskSwitchContext();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1711): error:  #169: expected a declaration
+  				}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1763): warning:  #12-D: parsing restarts here after previous syntax error
+  		return xReturn;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1764): error:  #169: expected a declaration
+  	} /*lint !e818 xTask cannot be a pointer to const because it is a typedef. */
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1811): warning:  #12-D: parsing restarts here after previous syntax error
+  			
+askEXIT_CRITICAL();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1812): error:  #169: expected a declaration
+  		}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1849): warning:  #12-D: parsing restarts here after previous syntax error
+  		
+ortASSERT_IF_INTERRUPT_PRIORITY_INVALID();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1851): error:  #77-D: this declaration has no storage class or type specifier
+  		uxSavedInterruptStatus = portSET_INTERRUPT_MASK_FROM_ISR();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1851): error:  #59: function call is not allowed in a constant expression
+  		uxSavedInterruptStatus = 
+ortSET_INTERRUPT_MASK_FROM_ISR();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1852): error:  #169: expected a declaration
+  		{
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1874): error:  #169: expected a declaration
+  				else
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1887): warning:  #12-D: parsing restarts here after previous syntax error
+  		
+ortCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus );
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1889): error:  #169: expected a declaration
+  		return xYieldRequired;
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1890): error:  #169: expected a declaration
+  	}
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: 15 warnings, 30 errors
+compiling timers.c...
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c(278): error:  #147-D: declaration is incompatible with "TimerHandle_t xTimerCreate(const char *const, const TickType_t, const BaseType_t, void *const, TimerCallbackFunction_t)"  (declared at line 232 of "../FreeRTOS/include/timers.h")
+  	TimerHandle_t xTimerCreate(	const char * const pcTimerName,			/*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c(310): error:  #147-D: declaration is incompatible with "TimerHandle_t xTimerCreateStatic(const char *const, const TickType_t, const BaseType_t, void *const, TimerCallbackFunction_t, StaticTimer_t *)"  (declared at line 362 of "../FreeRTOS/include/timers.h")
+  	TimerHandle_t xTimerCreateStatic(	const char * const pcTimerName,		/*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c: 0 warnings, 2 errors
+compiling queue.c...
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(518): error:  #147: declaration is incompatible with "TaskHandle_t xQueueGetMutexHolder(QueueHandle_t)"  (declared at line 1466 of "../FreeRTOS/include/queue.h")
+  	void* xQueueGetMutexHolder( QueueHandle_t xSemaphore )
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(548): error:  #147: declaration is incompatible with "TaskHandle_t xQueueGetMutexHolderFromISR(QueueHandle_t)"  (declared at line 1467 of "../FreeRTOS/include/queue.h")
+  	void* xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore )
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c: 0 warnings, 2 errors
+"HAL_Key\HAL_Key.axf" - 42 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_HAL_Key
+  D:\Stm34App\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  D:\Stm34App\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

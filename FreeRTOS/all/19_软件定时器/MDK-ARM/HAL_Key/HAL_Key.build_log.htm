@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, a, LIC=585FJ-UKFD6-QDNKD-8RG9Y-L72G7-N1RRX
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  D:\software\Keil_v5\ARM\arm5_compiler\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+f:\atguigu\06_embedded\14_尚硅谷嵌入式技术之FreeRTOS实时系统\02_资料\04_完整案例\19_软件定时器\MDK-ARM\HAL_Key.uvprojx
+Project File Date:  03/15/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\software\Keil_v5\ARM\arm5_compiler\Bin'
+Build target 'HAL_Key'
+compiling croutine.c...
+compiling list.c...
+compiling event_groups.c...
+compiling timers.c...
+compiling heap_4.c...
+compiling stream_buffer.c...
+compiling queue.c...
+compiling tasks.c...
+compiling port.c...
+compiling stm32f1xx_it.c...
+compiling freertos_demo.c...
+linking...
+HAL_Key\HAL_Key.axf: Error: L6218E: Undefined symbol xTimerCreate (referred from freertos_demo.o).
+HAL_Key\HAL_Key.axf: Error: L6218E: Undefined symbol xTimerGenericCommand (referred from freertos_demo.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+"HAL_Key\HAL_Key.axf" - 2 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_HAL_Key
+  D:/software/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/software/Keil_v5/ARM/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
